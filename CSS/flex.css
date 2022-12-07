@@ -1,0 +1,36 @@
+section {
+    border: 1px solid red;
+    width: 90%;
+    display: flex;
+    height: 600px;
+
+    /* permite cambiar el eje principal  con el valor colum permite cambiar el eje a vertical
+    y con colmun revers permite cambiar el inicio del  eje
+    Row es el valor por defecto que indica que el eje principal es horinzontal
+    colum cambia el eje principal a vertical*/
+
+
+    /* permite establecer cuando los elementos se adaptan al tamño del ancho y
+ bajan dependiendo del tamaño del contenedor */
+   
+    flex-direction: color red;
+
+    /* permite ordenar elementos en el eje principal */
+    justify-content:space-between;
+
+    /* permite ordenar elementos en el eje secundario por defecto es vertical
+     dependiendo de flex direction */
+    align-items:center ;
+
+    flex-wrap: wrap;
+flex-flow: ;
+ 
+}
+
+div {
+width: 100px;
+   height: 100px;
+   border: 1px solid  ;
+
+}
+

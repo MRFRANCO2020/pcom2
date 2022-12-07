@@ -1,0 +1,317 @@
+/* estilos para las secciones de contacto y formaularios 
+los estilos de encabezado navegador y pie de pagina ya estan en el archivo estilos.css */
+
+/*ESTILOS UNIVERSALES A TODOS LOS ELEMENTOS*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(../img/fondo.jpg);
+    /* logra efecto de dejar la imagen de fondo fija cuando movemos el scroll hacia abajo */
+    background-attachment: fixed;
+
+}
+
+/* COMENZAMOS CON ESTILOS EN ENCABEZADO */
+header {
+
+    /*ANCHO*/
+    width: 90%;
+    height: 180px;
+
+    margin: 0px auto;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #70f321;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header img {
+    width: 150px;
+    height: 130px;
+}
+
+/* FIN DE ESTILOS DEL ENCABEZADO */
+/* COMENZAMOS CON ESTILOS EN MENU DE NAVEGACIÓN */
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+nav ul li {
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+
+}
+
+nav ul li:hover {
+    background-color: #70f321;
+    box-shadow: 2px 3px 3px green;
+    transition: 500ms;
+}
+
+
+nav ul li a {
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+nav ul li {
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+
+}
+
+nav ul li:hover {
+    background-color: #70f321;
+    box-shadow: 2px 3px 3px green;
+    transition: 300ms;
+}
+
+
+nav ul li a {
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+/* COLOCA UN BORDE IZQUIERDO EN DE COLOR BLANCO 
+EN EL PRIMER ELEMENTO LI DEL MENU */
+nav>ul>li {
+    border-left: 1px solid white;
+}
+
+/* coloca un borde derecho de color blanco
+ solo en el último li del menu */
+nav>ul>li:last-child {
+    border-right: 1px solid white;
+}
+
+
+/*MENÚ DESPLEGABLE*/
+nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+nav ul li:hover ul {
+    display: block;
+    background-color: black;
+}
+
+nav ul li:hover ul li {
+    display: block;
+
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+aside div ul {
+    list-style: none;
+}
+
+
+/* CONTENEDOR2 ES EL NOMBRE DEL section DE CONTACTO LO CAMBIE PARA QUE NO SE MEZCLEN */
+.contenedor2 {
+    width: 80%;
+
+    margin: 25px auto;
+    border: 1px solid blue;
+
+}
+
+/* ESTILO AL TITULO H2 DENTRO DEL section DONDE ESTAMOS?? */
+section h2 {
+    font-size: 24px;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #70f321;
+}
+
+/* ESTILO PARA QUITAR LAS VIÑETAS DE LAS LISTAS UL */
+aside div ul {
+    list-style: none;
+}
+
+.contenedor2 div {
+    width: 40%;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    float: left;
+
+}
+
+
+
+section article {
+    width: 50%;
+    margin-left: 4%;
+    margin-top: 20px;
+    
+    text-align: center;
+    float: left;
+
+}
+
+/* ESTIILOS AL PIE DE PAGINA */
+footer {
+
+    clear: both;
+    height: 60px;
+    width: 90%;
+
+    margin: 0 auto;
+    background-color: beige;
+    vertical-align: middle;
+
+}
+
+/* ESTILOS A LA IMAGEN DENTRO DEL PIE */
+footer img {
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+
+/* ESTILOS AL TEXTO DENTRO DEL PIE */
+footer h2 {
+    text-align: center;
+    line-height: 60px;
+}
+
+/* estilos del formulario */
+
+/* PUEDEN MIRAR EL ESTILOS DEL FORMULARIO DE LA BARRA LATERAL DE LA PAGINA INDEX  */
+
+
+/* comienzo estilo del formulario */
+
+
+.limpia {
+    float: none;
+    clear: both;
+}
+
+/* 
+input[type="email"],
+input[type="password"] {
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid gray;
+    /* border-radius: 25px; 
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+
+    color: rgb(27, 176, 69);
+}  */
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    border: 1px solid green;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    text-align: center;
+    color: coral;
+    font-size: 22px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px auto;
+    border-radius: 50px;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: blueviolet;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+input[type="text"]:hover {
+    background-color: black;
+}
+
+/* HOVER PARA DAR EFECTO AL PASAR CURSOR POR ENCIMA DEL ELEMENTO 
+EJEMPLO UN PARRAFO UNA IMAGEN  UN SECTION O UN FORMALARIO */
+
+input[type="password"]:hover {
+    background-color: blue;
+}
+
+input[type="email"]:hover {
+    background-color: #70f321;
+}
+
+label {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0a1c6b;
+margin: 20px;
+}
+
+label:hover {
+    color: rgb(238, 131, 8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 15px;
+    width: 100px;
+    border: 2px solid blue;
+    margin: 15px;
+    background-color: rgb(24, 24, 23);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover{
+    background-color: #70f321;
+    color: blueviolet;
+}
+
+input[type="reset"]:hover{
+    background-color:#f32179 ;
+    color: beige;
+}

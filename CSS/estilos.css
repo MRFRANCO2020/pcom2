@@ -1,0 +1,332 @@
+/*ESTILOS UNIVERSALES A TODOS LOS ELEMENTOS*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    /* COLOAR IMAGEN DE FONDO EL .. ES COMO PARA IR  AL CARPETA ANTERIOR 
+    YA QUE EL CSS ESTA EN OTRA CARPETA LA BARRA / AL PRINCIPIO EN EL URL EN ESTE CASO LA BARRA SE MANTIENE */
+    background-image: url(../img/fondo.jpg);
+
+    /* EFECTO DE MANTENER LA IMAGEN DE  FONDO FIJA */
+    background-attachment: fixed;
+
+    /* ALTURA DEL BODY PARA QUE SE NOTE QUE LA IMAGEN QUEDA FIJADA */
+    height: 1000px;
+}
+
+/* COMENZAMOS CON ESTILOS EN ENCABEZADO */
+header {
+
+    /*ANCHO*/
+    width: 90%;
+    height: 180px;
+    /* para centrar */
+    margin: 0px auto;
+    text-align: center;
+}
+
+header a {
+    /* ESTILO PARA QUITAR EL SUBRAYADO DE LOS ENLACES */
+    text-decoration: none;
+    color: #70f321;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header img {
+    width: 150px;
+    height: 130px;
+}
+
+/* FIN DE ESTILOS DEL ENCABEZADO */
+/* COMENZAMOS CON ESTILOS EN MENU DE NAVEGACIÓN */
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    /* ESTILO PARA CENTRAR VERTICALMENTE EL TEXTO DEL MENU */
+    line-height: 40px;
+   
+}
+
+
+
+nav ul li {
+    display: inline-block;
+
+
+    width: 140px;
+    text-align: center;
+
+}
+
+/* al pasar el  cursos por encima de un elemento ejeemplo enlace una imagen tipo input */
+nav ul li:hover {
+    background-color: #70f321;
+    box-shadow: 5px 5px 5px green;
+
+    /* transition GENERA UNA "DEMORA CUANDO SE PASA EL CURSOR POR EL MENU PUEDEN CAMBIAR LOS 300ms y probar" */
+    transition: 300ms;
+}
+
+
+nav ul li a {
+    color: rgb(232, 17, 17);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* quita los subrayados de los elemento a */
+    text-decoration: none;
+}
+
+/* COLOCA UN BORDE IZQUIERDO EN DE COLOR BLANCO 
+EN EL PRIMER ELEMENTO LI DEL MENU */
+nav>ul>li {
+    border-left: 1px solid rgb(8, 225, 87);
+}
+
+/* coloca un borde derecho de color blanco
+ solo en el último li del menu */
+nav>ul>li:last-child {
+
+
+    border-right: 1px solid white;
+}
+
+
+/*MENÚ DESPLEGABLE*/
+nav>ul>li>ul {
+
+    /* oculta el submenu de la lista del menu al cargar el html */
+    display: none;
+    position: absolute;
+
+    /*  z index permite especificiar la posicion en el ejez
+     es decir identifar que elemento se muestra por encima 
+     del otro el valor mayor es que sera visible por encima del otro elemento 
+     el valor menor se ocultara por debajo*/
+    z-index: 2;
+}
+
+nav ul li:hover ul {
+    /*  permite mostrar los elementos ul los muestra en forma de bloque 
+  ya que estaban ocultos */
+
+    display: block;
+    background-color: black;
+}
+
+nav ul li:hover ul li {
+    /*  permite colocar un elemnto debajo del otro de tipo 
+    li al pasar el cursos sobre el menu */
+    display: block;
+
+}
+
+/* centrar en contenedor y marcar el ancho de 90% */
+.contenedor {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+aside div ul {
+    /* quita la viñeta del los de lista ya sea ul o ol listar "ordenadas o desordenadas" */
+    list-style: none;
+}
+
+/*estilos de barra lateral*/
+aside {
+    width: 15%;
+
+    float: left;
+    text-align: center;
+    /* margin distancia entre los elementos distancia de arriba */
+    margin-top: 100px;
+    border: 1px solid red;
+}
+
+aside .login div ul li {
+    padding: 10px;
+    border: 1px solid rgb(241, 234, 234);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+}
+
+/* ESTILOS A LOS ENLACES DE LA BARRA */
+aside .login div ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+aside .login div ul li:hover {
+    background-color: #70f321;
+}
+
+/* cambia el color del  texto de formaulario al pasar el cursor en la barra lateral */
+aside .login div ul li:hover a {
+    color: black;
+}
+
+/* estilos a los titulos dentro de la barra */
+div h3 {
+    color: rgb(4, 213, 109);
+    border: 1px solid gray;
+    width: 100%;
+    border-radius: 25px;
+    background-color: white;
+
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* estilos al formulario al input password y email */
+input[type="email"],
+input[type="password"] {
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid gray;
+    /* border-radius: 25px; */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+
+    color: rgb(27, 176, 69);
+}
+
+/* estilo al color del placeholder */
+::placeholder {
+    color: #e11958;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* estilos al formulario al A LOS BOTONES */
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /* ESTILO PARA COLOCAR UNA "SOMBRA" A LOS BOTONES PUEDEN CAMBIAR LOS VALORES Y PROBAR */
+
+    /*  inset especifica que la sombra sea interna,
+   para coloar sombra interna a los elementos */
+    box-shadow: 15px 15px 15px rgb(192, 195, 193) inset;
+}
+
+/* ESTILOS AL DIV CONTENEDOR Y SECTION */
+
+
+section {
+    margin-top: 100px;
+    float: left;
+    width: 75%;
+    margin-left: 4%;
+    text-align: center;
+
+
+
+}
+
+section h2 {
+    font-size: 24px;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #70f321;
+}
+
+section article h3 {
+    text-align: center;
+    /* background-color: #e11958;
+    color: white; */
+}
+
+section article {
+    width: 26%;
+    margin: 2%;
+    display: inline-block;
+    text-align: justify;
+
+}
+
+/* ESTILOS PARA DAR ANCHO ALTO BORDE Y EFECTO REDONDEADO A LAS IMAGENES */
+section article img {
+    width: 250px;
+    height: 200px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+/* ESTILO PARA EL EFECTO EN LA IMAGEN AL PASAR EL RATON */
+section article img:hover {
+    /* width: 250px;
+    height: 200px; */
+    border: 2px solid;
+
+    border: 3px solid green;
+    border-radius: 25px;
+    box-shadow: 10px 10px 15px rgb(232, 228, 230);
+}
+
+/* ESTILOS A LOS PARRAFOS DENTRO DE LOS ARICULOS */
+section article p {
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ESTILOS EN EL PIE DE PAGINA */
+
+
+
+.limpia {
+    float: none;
+    clear: both;
+}
+
+footer img {
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+
+footer {
+    position: relative;
+    top: 90px;
+    clear: both;
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: beige;
+    /* vertical-align: middle; */
+
+}
+
+footer h2 {
+    text-align: center;
+    line-height: 60px;
+}
+
+
+

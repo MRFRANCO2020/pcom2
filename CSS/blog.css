@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: burlywood;
+}
+
+header {
+
+    /*ANCHO*/
+    width: 90%;
+    height: 180px;
+    /* para centrar */
+    margin: 0px auto;
+    text-align: center;
+}
+
+header a {
+    /* ESTILO PARA QUITAR EL SUBRAYADO DE LOS ENLACES */
+    text-decoration: none;
+    color: #70f321;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header img {
+    width: 150px;
+    height: 130px;
+}
+
+/* FIN DE ESTILOS DEL ENCABEZADO */
+/* COMENZAMOS CON ESTILOS EN MENU DE NAVEGACIÓN */
+nav {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    /* ESTILO PARA CENTRAR VERTICALMENTE EL TEXTO DEL MENU */
+    line-height: 40px;
+    margin-bottom: 25px;
+}
+
+
+
+nav ul li {
+    display: inline-block;
+
+
+    width: 140px;
+    text-align: center;
+
+}
+
+/* al pasar el  cursos por encima de un elemento ejeemplo enlace una imagen tipo input */
+nav ul li:hover {
+    background-color: #70f321;
+    box-shadow: 5px 5px 5px green;
+
+    /* transition GENERA UNA "DEMORA CUANDO SE PASA EL CURSOR POR EL MENU PUEDEN CAMBIAR LOS 300ms y probar" */
+    transition: 300ms;
+}
+
+
+nav ul li a {
+    color: rgb(232, 17, 17);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*  para quitar los subrayados de los elemento a */
+    text-decoration: none;
+}
+
+/* COLOCA UN BORDE IZQUIERDO EN DE COLOR BLANCO 
+EN EL PRIMER ELEMENTO LI DEL MENU */
+nav>ul>li {
+    border-left: 1px solid rgb(8, 225, 87);
+}
+
+/* coloca un borde derecho de color blanco
+ solo en el último li del menu */
+nav>ul>li:last-child {
+
+
+    border-right: 1px solid white;
+}
+
+
+/*MENÚ DESPLEGABLE*/
+nav>ul>li>ul {
+
+    /* oculta el submenu de la lista del menu al cargar el html */
+    display: none;
+    position: absolute;
+
+    /*  z index permite especificiar la posicion en el ejez
+     es decir identifar que elemento se muestra por encima 
+     del otro el valor mayor es que sera visible por encima del otro elemento 
+     el valor menor se ocultara por debajo*/
+    z-index: 2;
+}
+
+nav ul li:hover ul {
+    /*  permite mostrar los elementos ul los muestra en forma de bloque 
+  ya que estaban ocultos */
+
+    display: block;
+    background-color: black;
+}
+
+nav ul li:hover ul li {
+    /*  permite colocar un elemnto debajo del otro de tipo 
+    li al pasar el cursos sobre el menu */
+    display: block;
+
+}
+
+section{
+    width: 90%;
+    margin: 0 auto;
+    border: 10pxpx solid red;
+    
+}
+
+section article{
+    width: 100%;
+    border: 1px solid green;
+}
+
+section article h2{
+    text-align: center;
+    margin: 15px;
+}
+section article p {
+    color: red;
+    font-size: 18px;
+    display: inline-block;
+    width: 60%;
+    margin-left: 5%;
+    text-align: justify;
+}
+
+
+
+
+/* inicio del pie */
+footer img {
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+
+footer {
+    position: relative;
+    top: 90px;
+    clear: both;
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: beige;
+    /* vertical-align: middle; */
+
+}
+
+footer h2 {
+    text-align: center;
+    line-height: 60px;
+}
